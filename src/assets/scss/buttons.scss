@@ -1,0 +1,29 @@
+.c-btn {
+  padding: 10px 15px;
+  color: $white;
+  border: 0;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  &.green {
+    background: $greenGradient;
+  }
+  &.blue {
+    background: $default;
+  }
+}
+
+.bordered-btn {
+  padding: 9px 15px;
+  font-size: 13px;
+  border: 1px solid $tripleC;
+  border-radius: 4px;
+  color: $blue;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 1px 1px 10px #bbbbbb5e;
+    transition: 0.5s;
+  }
+}
