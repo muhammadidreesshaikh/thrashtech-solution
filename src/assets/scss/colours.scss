@@ -1,8 +1,6 @@
-$default: linear-gradient(77deg,#090979,#00d4ff);
-$greenGradient: linear-gradient(270deg,#76e672 0,#41c83e 100%);
+$blueGradient: linear-gradient(90deg, rgba(68,117,219,1) 0%, rgba(0,0,0,1) 100%);
 
 $orange: #fc6d43;
-$blue: #090979;
 $white: #ffffff;
 $black: #000000;
 $lightBlack: #1e1f22;
@@ -12,15 +10,11 @@ $tripleC: #f5f3f3;
 
 
 .bg-blue-gradient {
-  background: $default;
-}
-
-.bg-green-gradient {
-  background: $greenGradient;
+  background: $blueGradient;
 }
 
 .text-default {
-  background: $default;
+  background: $blueGradient;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

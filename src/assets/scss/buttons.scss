@@ -6,20 +6,17 @@
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
-  &.green {
-    background: $greenGradient;
-  }
   &.blue {
-    background: $default;
+    background: $blueGradient;
   }
 }
 
 .bordered-btn {
   padding: 9px 15px;
-  font-size: 13px;
+  font-size: 14px;
   border: 1px solid $tripleC;
   border-radius: 4px;
-  color: $blue;
+  color: $black;
   cursor: pointer;
 
   &:hover {

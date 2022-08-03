@@ -1,0 +1,242 @@
+@import '../../../styles.scss';
+
+.header {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #060606;
+    background-blend-mode: soft-light;
+    width: 100%;
+    height: 100vh;
+    
+    .logo {
+        a {
+            font-weight: bold;
+            font-size: 19px;
+            color: $white;
+        }
+    }
+
+    .nav {
+        float: right;
+        position: relative;
+
+        @include respond(tablet) {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+
+            li {
+                a {
+                    color: $white;
+                    font-size: 14px;
+                    padding: 0 13px;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $orange;
+                        transition: 0.5s;
+                        opacity: 0.5s;
+                    }
+                }
+
+                &:hover {
+                    color: $orange;
+                    transition: 0.5s;
+                    opacity: 0.5s;
+                }
+            }
+        }
+        
+    }
+
+    .slider-heading{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        h1{
+            color: $white;
+            font-size: 50px;
+        }
+        p{
+            color: $gray;
+            padding-top: 6px;
+            font-size: 16px;
+        }
+        .btn-slider{
+            margin-top: 40px;
+            a{
+                color: $white;
+            }
+        }
+    }
+
+    .toggleContainer {
+        cursor: pointer;
+        position: fixed;
+        top: 10px;
+        right: 30px;
+        z-index: 20;
+    }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        border-radius: 10px;
+        width: 30px;
+        height: 3px;
+        background: $black;
+        margin: 6px 0;
+        transition: 0.5s;
+    }
+
+    @media only screen and (max-width: 1440px) {
+        .toggleContainer {
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .toggleContainer {
+            display: block;
+        }
+    }
+}
+
+.change {
+    .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+        transform: rotate(-45deg) translate(-6px, 6px);
+        background: $blueGradient;
+    }
+
+    .bar2 {
+        opacity: 0;
+    }
+
+    .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+        background: $blueGradient;
+    }
+}
+
+.sidebar {
+    a {
+        text-decoration: none;
+        color: $white;
+        text-transform: capitalize;
+    }
+
+    ul {
+        list-style: none;
+        margin-bottom: 0;
+        padding-left: 0;
+        padding: 20% 0 0 5%;
+        height: 85vh;
+        max-height: 85vh;
+        overflow-y: auto;
+
+        @include respond(tablet) {
+            padding: 2.5rem 1.125rem 0 1.125rem;
+        }
+
+        @include respond(mobile) {
+            padding: 4.375rem 1.125rem 0 1.125rem;
+        }
+
+        li {
+            padding: 10px 0 10px 0;
+
+            a {
+                text-decoration: none;
+                color: $white;
+                font-size: 20px;
+                font-weight: 500;
+                transition: 0.3s;
+
+                &:hover {
+                    color: $orange;
+                }
+            }
+        }
+    }
+
+    &.side {
+        position: fixed;
+        // background: linear-gradient(60deg, #29323c 0%, #485563 100%);
+        background: $blueGradient;
+        color: $white;
+        right: -50%;
+        top: 0;
+        bottom: 0;
+        z-index: 16;
+        transition: 0.8s;
+
+        &.show {
+            right: 0;
+        }
+    }
+
+    &.flap {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(60deg, #29323c 0%, #485563 100%);
+        color: $white;
+        top: -100%;
+        z-index: 1;
+        transition: 0.8s;
+
+        &.show {
+            top: 0;
+        }
+    }
+
+    .bottom-thing {
+        position: absolute;
+        bottom: 5%;
+    }
+}
+
+.profile {
+    position: relative;
+
+    img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .sidebar.side {
+        width: 100%;
+        right: -100%;
+    }
+}
+
+.fade-area {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $white;
+    ;
+    opacity: 0.5;
+    transition: 0.5s;
+    z-index: 1;
+
+    &.show {
+        display: block;
+    }
+}

@@ -64,10 +64,10 @@ input[type="color"]:focus,
   box-shadow: none;
 }
 
-.main-header-space {
-  position: relative;
-  top: 55px;
-}
+// .main-header-space {
+//   position: relative;
+//   top: 55px;
+// }
 
 .loading {
   width: 200px;
@@ -222,7 +222,7 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $default;
+  background: $blueGradient;
   -webkit-border-radius: 10px;
 }
 
