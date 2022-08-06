@@ -1,19 +1,17 @@
 @import '../../../styles.scss';
 
 .header {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #060606;
-    background-blend-mode: soft-light;
+    height: 55px;
+    position: fixed;
     width: 100%;
-    height: 100vh;
-    
+    z-index: 999;
+    box-shadow: 0 5px 15px 0 rgb(0 0 0 / 5%);
+    background: $white;
     .logo {
         a {
             font-weight: bold;
             font-size: 19px;
-            color: $white;
+            color: $black
         }
     }
 
@@ -31,7 +29,7 @@
 
             li {
                 a {
-                    color: $white;
+                    color: $black;
                     font-size: 14px;
                     padding: 0 13px;
                     cursor: pointer;
@@ -51,29 +49,6 @@
             }
         }
         
-    }
-
-    .slider-heading{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        h1{
-            color: $white;
-            font-size: 50px;
-        }
-        p{
-            color: $gray;
-            padding-top: 6px;
-            font-size: 16px;
-        }
-        .btn-slider{
-            margin-top: 40px;
-            a{
-                color: $white;
-            }
-        }
     }
 
     .toggleContainer {
@@ -136,14 +111,13 @@
     ul {
         list-style: none;
         margin-bottom: 0;
-        padding-left: 0;
-        padding: 20% 0 0 5%;
+        padding: 8.75rem 0 0 2.5rem;
         height: 85vh;
         max-height: 85vh;
         overflow-y: auto;
 
         @include respond(tablet) {
-            padding: 2.5rem 1.125rem 0 1.125rem;
+            padding: 4.375rem 2.188rem 0 2.188rem;
         }
 
         @include respond(mobile) {

@@ -3,7 +3,12 @@
 body {
   margin: 0;
   overflow-x: hidden !important;
-  font-family: "Montserrat", sans-serif !important;
+  // font-family: "Montserrat", sans-serif !important;
+
+  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 h1,
@@ -64,10 +69,10 @@ input[type="color"]:focus,
   box-shadow: none;
 }
 
-// .main-header-space {
-//   position: relative;
-//   top: 55px;
-// }
+.main-header-space {
+  position: relative;
+  top: 55px;
+}
 
 .loading {
   width: 200px;
