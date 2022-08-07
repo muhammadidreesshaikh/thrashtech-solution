@@ -206,6 +206,20 @@ button {
   }
 }
 
+.home-heading {
+  h3 {
+    font-size: 35px;
+    font-weight: 600;
+    color: $black;
+  }
+
+  p {
+    padding-top: 7px;
+    font-size: 14px;
+    color: $gray;
+  }
+}
+
 .heading {
   text-align: center;
 

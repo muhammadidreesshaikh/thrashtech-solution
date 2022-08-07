@@ -1,3 +1,111 @@
 <app-slider></app-slider>
 
-<p>home works!</p>
+<!-- about -->
+<section>
+    <div class="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-6">
+                    <div class="home-heading">
+                        <h3>About</h3>
+                        <p>Thrashtect Solution is a software and mobile app development company with a world-class team
+                            of talented data scientists, developers, designers, mathematicians, engineers, and creative
+                            artists. We are motivated to build elegant and functional digital products that solve
+                            complex problems.</p>
+
+                        <div class="btn-learn mt-4">
+                            <a routerLink="/about" class="bordered-btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="right">
+                        <img src="../../../assets/img/home/about2.gif">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- services -->
+<section>
+    <div class="services">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 colmd-8 col-lg-7">
+                    <div class="home-heading">
+                        <h3>Our Services</h3>
+                        <p>Build an engaging app. Integrate AI to work more efficiently. Dive into your data to predict
+                            demand. Thrashtect Solution can help you do all this and more with our innovative,
+                            client-first services.</p>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="inner">
+                        <div class="row">
+
+                            <div class="col-3" *ngFor="let item of services">
+                                <div class="admin-card">
+                                    <img src="{{item.image}}">
+                                    <h4>{{item.name}}</h4>
+                                </div>
+                            </div>
+
+                            <div class="btn-services mt-5 text-center">
+                                <a routerLink="/services" class="bordered-btn">Learn More</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- projects -->
+<section>
+    <div class="projects">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 colmd-8 col-lg-7">
+                    <div class="home-heading">
+                        <h3>Projects</h3>
+                        <p>We help our clients grow with cutting-edging technologies, extravagant designs, and innovative software solutions.</p>
+                    </div>
+                </div>
+
+                <div class="col-12"> 
+                    <div class="inner">
+                        <div class="row">
+
+                            <div class="col-12 col-md-6 col-lg-3" *ngFor="let item of projects">
+                                <div class="admin-card">
+                                    <img src={{item.image}} class="image" style="width:100%">
+            
+                                    <div class="middle">
+                                        <a href="{{item.link}}" class="name">{{item.name}}</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn-projects mt-5 text-center">
+                                <a routerLink="/projects" class="bordered-btn">Learn More</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

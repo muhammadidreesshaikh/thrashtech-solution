@@ -1,0 +1,116 @@
+@import '../../../styles.scss';
+
+// about
+.about {
+    background-color: #f7f7f7;
+    padding: 40px 0;
+
+    .home-heading {
+        margin-top: 3.125rem;
+    }
+
+    .right {
+        img {
+            width: 50%;
+            height: auto;
+            display: block;
+            margin: auto;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+
+// services
+.services {
+    padding: 40px 0;
+
+    .inner {
+        margin-top: 3.125rem;
+
+        .admin-card {
+            margin-top: 30px;
+            text-align: center;
+            width: 100%;
+            height: auto;
+            color: $white;
+            background: linear-gradient(90deg, rgba(0, 82, 101, 1) 0%, rgba(182, 181, 181, 1) 100%);
+            transition: transform .5s;
+
+            &:hover {
+                ms-transform: scale(1.5);
+                /* IE 9 */
+                -webkit-transform: scale(1.5);
+                /* Safari 3-8 */
+                transform: scale(1.1);
+            }
+
+            img {
+                width: 60px;
+                height: auto;
+            }
+
+            h4 {
+                font-size: 15px;
+                padding-top: 20px;
+            }
+        }
+    }
+}
+
+// projects
+.projects {
+    background-color: #f7f7f7;
+    padding: 40px 0;
+    .inner {
+        margin-top: 30px;
+        .admin-card {
+            position: relative;
+            width: 100%;
+            margin-top: 20px;
+            padding: 0px;
+
+            img {
+                object-fit: cover;
+                object-position: center;
+                border-radius: 5px;
+                &.image {
+                    opacity: 1;
+                    display: block;
+                    width: 100%;
+                    height: 250px;
+                    transition: .5s ease;
+                    backface-visibility: hidden;
+                }
+            }
+
+            .middle {
+                transition: .5s ease;
+                opacity: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            &:hover .image {
+                opacity: 0.3;
+            }
+
+            &:hover .middle {
+                opacity: 1;
+            }
+
+            .name {
+                background: linear-gradient(90deg, rgba(0,82,101,1) 0%, rgba(182,181,181,1) 100%);
+                color: $white;
+                font-size: 13px;
+                padding: 8px 25px;
+                cursor: pointer;
+                border-radius: 30px;
+            }
+        }
+    }
+}
