@@ -7,17 +7,37 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    @include respond(tablet) {
+        height: 50vh;
+    }
+    @include respond(mobile) {
+        height: 70vh;
+    }
     .slider-heading{
         margin-top: 4.375rem;
+        @include respond(mobile) {
+            text-align: center;
+        }
         h1{
             color: $black;
             font-size: 60px;
             font-weight: 700;
+            @include respond(mobile) {
+                font-size: 42px;
+            }
+
+            @include respond(tablet) {
+                font-size: 40px;
+            }
         }
         p{
             color: $gray;
             padding-top: 6px;
             font-size: 16px;
+            @include respond(mobile) {
+                padding-top: 5px;
+                font-size: 16px;
+            }
         }
         img{
             width: 170px;
@@ -28,14 +48,31 @@
             top: 60px;
             left: 20px;
             border-radius: 30px;
+            @include respond(tablet) {
+                width: 120px;
+                top: 50px;
+                left: 0px;
+            }
+
+            @include respond(mobile) {
+                width: 115px;
+                top: 10px;
+                left: 5px;
+            }
         }
     }
     .slider-img{
+        @include respond(mobile) {
+            float: right;
+        }
         img{
             width: 37.5rem;
             height: auto;
             object-fit: cover;
             object-position: center;
+            @include respond(tablet) {
+                width: 100%;
+            }
         }
     }
 }

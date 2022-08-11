@@ -11,7 +11,7 @@
         a {
             font-weight: bold;
             font-size: 19px;
-            color: $black
+            color: $lightBlack;
         }
     }
 
@@ -87,7 +87,7 @@
     .bar1 {
         -webkit-transform: rotate(-45deg) translate(-6px, 6px);
         transform: rotate(-45deg) translate(-6px, 6px);
-        background: $blueGradient;
+        background: $default;
     }
 
     .bar2 {
@@ -97,7 +97,7 @@
     .bar3 {
         -webkit-transform: rotate(45deg) translate(-8px, -8px);
         transform: rotate(45deg) translate(-8px, -8px);
-        background: $blueGradient;
+        background: $default;
     }
 }
 
@@ -143,8 +143,7 @@
 
     &.side {
         position: fixed;
-        // background: linear-gradient(60deg, #29323c 0%, #485563 100%);
-        background: $blueGradient;
+        background: $default;
         color: $white;
         right: -50%;
         top: 0;
@@ -205,7 +204,6 @@
     width: 100%;
     height: 100%;
     background: $white;
-    ;
     opacity: 0.5;
     transition: 0.5s;
     z-index: 1;

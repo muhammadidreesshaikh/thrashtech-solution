@@ -9,6 +9,17 @@ export class HomeComponent implements OnInit {
 
   services: any = [];
   projects: any = [];
+  slideConfig = {
+    "slidesToShow": 3,
+    "slidesToScroll": 3,
+    "arrows" :false,
+    "dots": false,
+    "infinite": true,
+    "autoplay": true,
+    "autoplaySpeed": 1500
+  };
+  selectedTab: string = 'tab1';
+  bar: any = [];
 
   constructor() { }
 
@@ -49,29 +60,76 @@ export class HomeComponent implements OnInit {
     this.projects =[
       {
         id: 1,
-        image: '../../../assets/img/home/projects.png',
+        image: '../../../assets/img/home/project1.jpg',
         link: 'https://www.unation.com/',
         name: 'Unation',
       },
       {
         id: 2,
-        image: '../../../assets/img/home/projects.png',
+        image: '../../../assets/img/home/project2.jpg',
         link: 'https://www.mimik.app//',
         name: 'Mimik',
       },
       {
         id: 3,
-        image: '../../../assets/img/home/projects.png',
+        image: '../../../assets/img/home/project3.jpg',
         link: 'https://www.zkteco.com.pk/product_category/70.html',
         name: 'Zkteco',
       },
       {
         id: 4,
-        image: '../../../assets/img/home/projects.png',
+        image: '../../../assets/img/home/project5.jpg',
         link: 'https://www.gamelist.club/',
         name: 'Gamelist',
-      }
+      },
+      {
+        id: 5,
+        image: '../../../assets/img/home/project1.jpg',
+        link: 'https://www.unation.com/',
+        name: 'Unation',
+      },
+      {
+        id: 6,
+        image: '../../../assets/img/home/project2.jpg',
+        link: 'https://www.mimik.app//',
+        name: 'Mimik',
+      },
     ]
+
+    this.bar =[
+      {
+        id: 1,
+        icon: 'far fa-check-circle',
+        number: '4500',
+        name: 'PROJECT COMPLETED',
+      },
+      {
+        id: 2,
+        icon: 'fas fa-user-tie',
+        number: '30',
+        name: 'OUR STAFF',
+      },
+      {
+        id: 3,
+        icon: 'fas fa-headset',
+        number: '350',
+        name: 'SERVICES PROVIDE',
+      },
+      {
+        id: 4,
+        icon: 'far fa-smile',
+        number: '5300',
+        name: 'HAPPY CUSTOMERS',
+      },
+    ]
+  }
+
+  slickInit(e: any) {
+    console.log('slick initialized');
+  }
+
+  onTabChange(tab: string) {
+    this.selectedTab = tab;
   }
 
 }

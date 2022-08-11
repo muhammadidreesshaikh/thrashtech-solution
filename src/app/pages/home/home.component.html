@@ -6,7 +6,13 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-6">
+                <div class="col-12 col-md-6 col-lg-6 order-sm-1 order-md-2 order-lg-2">
+                    <div class="right">
+                        <img src="../../../assets/img/home/about2.gif">
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-6 order-sm-2 order-md-1 order-lg-1">
                     <div class="home-heading">
                         <h3>About</h3>
                         <p>Thrashtect Solution is a software and mobile app development company with a world-class team
@@ -15,14 +21,8 @@
                             complex problems.</p>
 
                         <div class="btn-learn mt-4">
-                            <a routerLink="/about" class="bordered-btn">Learn More</a>
+                            <a routerLink="/about" class="bordered-btn">View More</a>
                         </div>
-                    </div>
-                </div>
-
-                <div class="col-6">
-                    <div class="right">
-                        <img src="../../../assets/img/home/about2.gif">
                     </div>
                 </div>
 
@@ -37,12 +37,10 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-12 colmd-8 col-lg-7">
+                <div class="col-12 col-md-8 col-lg-7">
                     <div class="home-heading">
                         <h3>Our Services</h3>
-                        <p>Build an engaging app. Integrate AI to work more efficiently. Dive into your data to predict
-                            demand. Thrashtect Solution can help you do all this and more with our innovative,
-                            client-first services.</p>
+                        <p>Build an engaging app. Integrate AI to work more efficiently. Dive into your data to predict demand. Thrashtect Solution can help you do all this and more with our innovative, client-first services.</p>
                     </div>
                 </div>
 
@@ -50,7 +48,7 @@
                     <div class="inner">
                         <div class="row">
 
-                            <div class="col-3" *ngFor="let item of services">
+                            <div class="col-6 col-md-4 col-lg-3" *ngFor="let item of services">
                                 <div class="admin-card">
                                     <img src="{{item.image}}">
                                     <h4>{{item.name}}</h4>
@@ -58,7 +56,7 @@
                             </div>
 
                             <div class="btn-services mt-5 text-center">
-                                <a routerLink="/services" class="bordered-btn">Learn More</a>
+                                <a routerLink="/services" class="bordered-btn">View More</a>
                             </div>
 
                         </div>
@@ -76,35 +74,380 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-12 colmd-8 col-lg-7">
+                <div class="col-12 col-md-8 col-lg-7">
                     <div class="home-heading">
                         <h3>Projects</h3>
-                        <p>We help our clients grow with cutting-edging technologies, extravagant designs, and innovative software solutions.</p>
+                        <p>We help our clients grow with cutting-edging technologies, extravagant designs, and
+                            innovative software solutions.</p>
                     </div>
                 </div>
 
-                <div class="col-12"> 
+                <div class="col-12">
                     <div class="inner">
                         <div class="row">
 
-                            <div class="col-12 col-md-6 col-lg-3" *ngFor="let item of projects">
-                                <div class="admin-card">
-                                    <img src={{item.image}} class="image" style="width:100%">
-            
-                                    <div class="middle">
-                                        <a href="{{item.link}}" class="name">{{item.name}}</a>
+                            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
+                                (init)="slickInit($event)">
+                                <div class="me-2" ngxSlickItem *ngFor="let slide of projects" class="slide">
+                                    <div class="admin-card">
+                                        <img src="{{ slide.image }}" class="image" alt="" width="100%">
+
+                                        <div class="middle">
+                                            <a href="{{slide.link}}" class="name">{{slide.name}}</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </ngx-slick-carousel>
 
                             <div class="btn-projects mt-5 text-center">
-                                <a routerLink="/projects" class="bordered-btn">Learn More</a>
+                                <a routerLink="/projects" class="bordered-btn">See All</a>
                             </div>
 
                         </div>
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- technologies -->
+<section>
+    <div class="technologies">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12">
+                    <div class="home-heading">
+                        <h3>Technologies</h3>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="tabs">
+                        <ul>
+                            <li>
+                                <a [ngClass]="{'active': selectedTab === 'tab1'}"
+                                    (click)="onTabChange('tab1')">Mobile</a>
+                            </li>
+                            <li>
+                                <a [ngClass]="{'active': selectedTab === 'tab2'}" (click)="onTabChange('tab2')">Front
+                                    End </a>
+                            </li>
+                            <li>
+                                <a [ngClass]="{'active': selectedTab === 'tab3'}" (click)="onTabChange('tab3')">Database
+                                </a>
+                            </li>
+                            <li>
+                                <a [ngClass]="{'active': selectedTab === 'tab4'}" (click)="onTabChange('tab4')">Backend
+                                </a>
+                            </li>
+                            <li>
+                                <a [ngClass]="{'active': selectedTab === 'tab5'}" (click)="onTabChange('tab5')">CMS</a>
+                            </li>
+                            <li>
+                                <a [ngClass]="{'active': selectedTab === 'tab6'}" (click)="onTabChange('tab6')">Infra &
+                                    DevOps </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tabs-field">
+                        <div *ngIf="selectedTab == 'tab1'">
+                            <div class="field-inner">
+                                <div class="row justify-content-center">
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology1.png">
+                                            <h6>IOS</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology2.png">
+                                            <h6>Android</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology3.png">
+                                            <h6>React Native</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology4.png">
+                                            <h6>Flutter</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology5.png">
+                                            <h6>Ionic</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology6.png">
+                                            <h6>Swift</h6>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div *ngIf="selectedTab == 'tab2'">
+                            <div class="field-inner">
+                                <div class="row justify-content-center">
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology7.png">
+                                            <h6>Angular</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology3.png">
+                                            <h6>React Js</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology8.png">
+                                            <h6>TypeScript</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology9.png">
+                                            <h6>Vue</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology10.png">
+                                            <h6>Javastrip</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology11.png">
+                                            <h6>HTML5</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology12.png">
+                                            <h6>Sass</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology13.png">
+                                            <h6>Bootstrap</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology14.png">
+                                            <h6>Css3</h6>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div *ngIf="selectedTab == 'tab3'">
+                            <div class="field-inner">
+                                <div class="row justify-content-center">
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology15.png">
+                                            <h6>Mongo DB</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology16.png">
+                                            <h6>MySQL</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology17.png">
+                                            <h6>MsSQL</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology18.png">
+                                            <h6>Firebase</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology19.png">
+                                            <h6>DynamoDB</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div *ngIf="selectedTab == 'tab4'">
+                            <div class="field-inner">
+                                <div class="row justify-content-center">
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology20.png">
+                                            <h6>PHP</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology21.png">
+                                            <h6>Ruby Rails</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology22.png">
+                                            <h6>Java</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology23.png">
+                                            <h6>Node .JS</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div *ngIf="selectedTab == 'tab5'">
+                            <div class="field-inner">
+                                <div class="row justify-content-center">
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology24.png">
+                                            <h6>Wordpress</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology25.png">
+                                            <h6>Magento</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology26.png">
+                                            <h6>Shopify </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div *ngIf="selectedTab == 'tab6'">
+                            <div class="field-inner">
+                                <div class="row justify-content-center">
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology27.png">
+                                            <h6>AWS</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology28.png">
+                                            <h6>Appium</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology29.png">
+                                            <h6>Digital ocean </h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology30.png">
+                                            <h6>Azure </h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="name">
+                                            <img src="../../../assets/img/home/technology31.png">
+                                            <h6>Gradle </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- bar -->
+<section>
+    <div class="bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3" *ngFor="let item of bar">
+                    <div class="bar-inner">
+                        <div class="row">
+                            <div class="col-3">
+                                <i class={{item.icon}}></i>
+                            </div>
+
+                            <div class="col-9">
+                                <h6>{{item.number}}</h6>
+                                <p>{{item.name}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

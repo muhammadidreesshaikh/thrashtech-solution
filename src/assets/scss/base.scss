@@ -4,7 +4,6 @@ body {
   margin: 0;
   overflow-x: hidden !important;
   // font-family: "Montserrat", sans-serif !important;
-
   font-family: 'Playfair Display', serif;
   font-family: 'Poppins', sans-serif;
   font-family: 'Roboto', sans-serif;
@@ -235,13 +234,35 @@ button {
   }
 }
 
+// slick-carousel
+.slide{
+  &.slick-slide{
+    margin-right: 20px;
+  }
+}
+
+.slide{
+  .slick-prev:before, .slick-next:before{
+    font-size: 25px;
+    color: red;
+  }
+
+  .slick-dots li.slick-active button:before{
+    color: red;
+  }
+
+  .slick-dots li button:before{
+    font-size: 9px;
+  }
+}
+
 // srollbar 
 ::-webkit-scrollbar {
   width: 7px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $blueGradient;
+  background: $default;
   -webkit-border-radius: 10px;
 }
 

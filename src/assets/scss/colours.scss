@@ -1,4 +1,4 @@
-$blueGradient: linear-gradient(90deg, rgba(68,117,219,1) 0%, rgba(0,0,0,1) 100%);
+$default: linear-gradient(90deg, rgba(0,42,255,1) 0%, rgba(146,0,190,1) 100%);
 
 $orange: #fc6d43;
 $white: #ffffff;
@@ -10,11 +10,11 @@ $tripleC: #f5f3f3;
 
 
 .bg-blue-gradient {
-  background: $blueGradient;
+  background: $default;
 }
 
 .text-default {
-  background: $blueGradient;
+  background: $default;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
