@@ -241,18 +241,14 @@ button {
   }
 }
 
+.slick-dots li.slick-active button:before{
+  color: red;
+}
+
 .slide{
   .slick-prev:before, .slick-next:before{
     font-size: 25px;
     color: red;
-  }
-
-  .slick-dots li.slick-active button:before{
-    color: red;
-  }
-
-  .slick-dots li button:before{
-    font-size: 9px;
   }
 }
 

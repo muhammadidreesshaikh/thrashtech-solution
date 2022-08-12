@@ -191,11 +191,12 @@
                     padding: 5px 25px;
                     border-radius: 40px;
                     cursor: pointer;
-                    background: linear-gradient(90deg, rgba(0, 42, 255, 1) 0%, rgba(146, 0, 190, 1) 100%);
+                    background: #a1a1a1;
                     margin: 0 15px;
 
                     &.active {
-                        color: $black // border-bottom: 5px solid red;
+                        color: $white;
+                        background: $default;
                     }
                 }
             }
@@ -264,12 +265,14 @@
         }
 
         i {
-            background: linear-gradient(90deg, rgba(0, 42, 255, 1) 0%, rgba(146, 0, 190, 1) 100%);
-            ;
+            background: linear-gradient(90deg, rgba(0, 42, 255, 1) 0%, rgba(146, 0, 190, 1) 100%);;
             padding: 12px;
             font-size: 30px;
             border-radius: 5px;
             color: $white;
+            @include respond(mobile) {
+                float: right;
+            }
         }
 
         h6 {
