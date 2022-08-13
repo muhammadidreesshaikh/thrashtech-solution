@@ -4,18 +4,22 @@
 .about {
     background-color: #f7f7f7;
     padding: 40px 0;
+
     @include respond(mobile) {
         padding: 20px 0 40px 0px;
     }
-    
+
     .home-heading {
         margin-top: 3.125rem;
+
         @include respond(tablet) {
             margin-top: 30px;
-            h3{
+
+            h3 {
                 font-size: 30px;
             }
-            p{
+
+            p {
                 font-size: 15px;
             }
         }
@@ -25,6 +29,7 @@
         @include respond(tablet) {
             margin-top: 30px;
         }
+
         img {
             width: 50%;
             height: auto;
@@ -32,9 +37,11 @@
             margin: auto;
             object-fit: cover;
             object-position: center;
+
             @include respond(tablet) {
                 width: 70%;
             }
+
             @include respond(tablet) {
                 width: 60%;
             }
@@ -45,13 +52,16 @@
 // services
 .services {
     padding: 40px 0;
+
     .home-heading {
         @include respond(tablet) {
             margin-top: 30px;
-            h3{
+
+            h3 {
                 font-size: 30px;
             }
-            p{
+
+            p {
                 font-size: 15px;
             }
         }
@@ -94,12 +104,14 @@
 .projects {
     background-color: #f7f7f7;
     padding: 40px 0;
+
     .home-heading {
         @include respond(tablet) {
-            h3{
+            h3 {
                 font-size: 30px;
             }
-            p{
+
+            p {
                 font-size: 15px;
             }
         }
@@ -163,9 +175,10 @@
 // technologies
 .technologies {
     padding: 40px 0;
+
     .home-heading {
         @include respond(tablet) {
-            h3{
+            h3 {
                 font-size: 30px;
             }
         }
@@ -174,14 +187,21 @@
     .tabs {
         margin-top: 4.375rem;
 
+        @include respond(mobile) {
+            margin-top: 45px;
+        }
+
         ul {
             display: flex;
             list-style: none;
             justify-content: center;
 
-            @include respond(mobile) {
+            @include respond(tablet) {
                 width: 100%;
+                height: 100px;
                 overflow-x: scroll;
+                white-space: nowrap;
+                padding: 10px 0;
             }
 
             li {
@@ -253,6 +273,8 @@
     @include respond(mobile) {
         height: 50vh;
         padding: 0;
+        justify-content: center;
+        align-items: center;
     }
 
     @include respond(mobileS) {
@@ -261,15 +283,16 @@
 
     .bar-inner {
         @include respond(tablet) {
-            padding-top: 30px;
+            padding: 15px 0;
         }
 
         i {
-            background: linear-gradient(90deg, rgba(0, 42, 255, 1) 0%, rgba(146, 0, 190, 1) 100%);;
+            background: linear-gradient(90deg, rgba(0, 42, 255, 1) 0%, rgba(146, 0, 190, 1) 100%);
             padding: 12px;
             font-size: 30px;
             border-radius: 5px;
             color: $white;
+
             @include respond(mobile) {
                 float: right;
             }
