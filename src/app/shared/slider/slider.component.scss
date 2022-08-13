@@ -10,6 +10,9 @@
     @include respond(tablet) {
         height: 50vh;
     }
+    @include respond(mobile) {
+        height: 60vh;
+    }
     .slider-heading{
         margin-top: 4.375rem;
         @include respond(mobile) {
