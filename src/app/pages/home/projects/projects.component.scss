@@ -1,0 +1,77 @@
+@import '../../../../styles.scss';
+
+.projects {
+    background-color: #f7f7f7;
+    padding: 40px 0;
+
+    .home-heading {
+        @include respond(tablet) {
+            h3 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .inner {
+        margin-top: 30px;
+
+        .admin-card {
+            position: relative;
+            width: 100%;
+            margin-top: 20px;
+            padding: 0px;
+
+            img {
+                object-fit: cover;
+                object-position: center;
+                border-radius: 5px;
+
+                &.image {
+                    opacity: 1;
+                    display: block;
+                    width: 100%;
+                    height: 250px;
+                    transition: .5s ease;
+                    backface-visibility: hidden;
+                }
+            }
+
+            .middle {
+                transition: .5s ease;
+                opacity: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            &:hover .image {
+                opacity: 0.3;
+            }
+
+            &:hover .middle {
+                opacity: 1;
+            }
+
+            .name {
+                background-color: $orange;
+                color: $white;
+                font-size: 13px;
+                padding: 8px 25px;
+                cursor: pointer;
+                border-radius: 30px;
+            }
+        }
+
+        .bordered-btn-light{
+            display: block;
+            margin: auto;
+        }
+    }
+}

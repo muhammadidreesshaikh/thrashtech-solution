@@ -1,1 +1,35 @@
-<p>services works!</p>
+<div class="services">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 col-md-8 col-lg-7">
+                <div class="home-heading">
+                    <h3>Our Services</h3>
+                    <p>Build an engaging app. Integrate AI to work more efficiently. Dive into your data to predict demand. Thrashtect Solution can help you do all this and more with our innovative, client-first services.</p>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="inner">
+                    <div class="row">
+
+                        <div class="col-6 col-md-4 col-lg-3" *ngFor="let item of services">
+                            <div class="admin-card">
+                                <img src="{{item.image}}">
+                                <h4>{{item.name}}</h4>
+                            </div>
+                        </div>
+
+                        <div class="btn-services mt-5 text-center">
+                            <div class="bordered-btn-dark">
+                                <a routerLink="/services">View More</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

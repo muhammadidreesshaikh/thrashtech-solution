@@ -1,0 +1,116 @@
+<div class="technologies">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12">
+                <div class="home-heading">
+                    <h3>Technologies</h3>
+                    <p>We work with</p>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="tabs">
+                    <ul>
+                        <li *ngFor="let tab of tabs; let i = index">
+                            <a [ngClass]="{'active': selectedTab === i}" (click)="onTabChange(i)">{{tab}}</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tabs-field">
+                    <div *ngIf="selectedTab == 0">
+                        <div class="field-inner">
+                            <div class="row justify-content-center">
+
+                                <div class="col-3 col-md-2 col-lg-2" *ngFor="let item of mobiles">
+                                    <div class="name">
+                                        <img src="{{item.image}}">
+                                        <h6>{{item.name}}</h6>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div *ngIf="selectedTab == 1">
+                        <div class="field-inner">
+                            <div class="row justify-content-center">
+
+                                <div class="col-3 col-md-2 col-lg-2" *ngFor="let item of frontends">
+                                    <div class="name">
+                                        <img src="{{item.image}}">
+                                        <h6>{{item.name}}</h6>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div *ngIf="selectedTab == 2">
+                        <div class="field-inner">
+                            <div class="row justify-content-center">
+
+                                <div class="col-3 col-md-2 col-lg-2" *ngFor="let item of databases">
+                                    <div class="name">
+                                        <img src="{{item.image}}">
+                                        <h6>{{item.name}}</h6>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div *ngIf="selectedTab == 3">
+                        <div class="field-inner">
+                            <div class="row justify-content-center">
+
+                                <div class="col-3 col-md-2 col-lg-2" *ngFor="let item of backend">
+                                    <div class="name">
+                                        <img src="{{item.image}}">
+                                        <h6>{{item.name}}</h6>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div *ngIf="selectedTab == 4">
+                        <div class="field-inner">
+                            <div class="row justify-content-center">
+
+                                <div class="col-3 col-md-2 col-lg-2" *ngFor="let item of cms">
+                                    <div class="name">
+                                        <img src="{{item.image}}">
+                                        <h6>{{item.name}}</h6>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div *ngIf="selectedTab == 5">
+                        <div class="field-inner">
+                            <div class="row justify-content-center">
+
+                                <div class="col-3 col-md-2 col-lg-2" *ngFor="let item of infradevOps">
+                                    <div class="name">
+                                        <img src="{{item.image}}">
+                                        <h6>{{item.name}}</h6>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

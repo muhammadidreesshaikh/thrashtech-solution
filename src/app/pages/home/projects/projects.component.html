@@ -1,1 +1,40 @@
-<p>projects works!</p>
+<div class="projects">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 col-md-8 col-lg-7">
+                <div class="home-heading">
+                    <h3>Projects</h3>
+                    <p>We help our clients grow with cutting-edging technologies, extravagant designs, and
+                        innovative software solutions.</p>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="inner">
+                    <div class="row">
+
+                        <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
+                            (init)="slickInit($event)">
+                            <div class="me-2" ngxSlickItem *ngFor="let slide of projects" class="slide">
+                                <div class="admin-card">
+                                    <img src="{{ slide.image }}" class="image" alt="" width="100%">
+
+                                    <div class="middle">
+                                        <a href="{{slide.link}}" class="name">{{slide.name}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </ngx-slick-carousel>
+
+                        <div class="bordered-btn-light mt-5">
+                            <a routerLink="/projects">See All</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

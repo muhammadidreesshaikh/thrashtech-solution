@@ -1,0 +1,51 @@
+@import '../../../../styles.scss';
+
+.services {
+    padding: 40px 0;
+
+    .home-heading {
+        @include respond(tablet) {
+            margin-top: 30px;
+
+            h3 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .inner {
+        margin-top: 3.125rem;
+
+        .admin-card {
+            margin-top: 30px;
+            text-align: center;
+            width: 100%;
+            height: auto;
+            color: $white;
+            background: linear-gradient(90deg, rgba(0, 42, 255, 1) 0%, rgba(146, 0, 190, 1) 100%);
+            transition: transform .5s;
+
+            &:hover {
+                ms-transform: scale(1.5);
+                /* IE 9 */
+                -webkit-transform: scale(1.5);
+                /* Safari 3-8 */
+                transform: scale(1.1);
+            }
+
+            img {
+                width: 60px;
+                height: auto;
+            }
+
+            h4 {
+                font-size: 15px;
+                padding-top: 20px;
+            }
+        }
+    }
+}

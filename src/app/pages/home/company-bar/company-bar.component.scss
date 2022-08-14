@@ -1,0 +1,64 @@
+@import '../../../../styles.scss';
+
+.bar {
+    background-image: url("../../../../assets/img/home/project1.jpg");
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: soft-light;
+    background-color: #222222;
+
+    @include respond(tablet) {
+        height: 30vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @include respond(mobile) {
+        height: 50vh;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @include respond(mobileS) {
+        height: 55vh;
+    }
+
+    .bar-inner {
+        @include respond(tablet) {
+            padding: 15px 0;
+        }
+
+        i {
+            background: linear-gradient(90deg, rgba(0, 42, 255, 1) 0%, rgba(146, 0, 190, 1) 100%);
+            padding: 12px;
+            font-size: 30px;
+            border-radius: 5px;
+            color: $white;
+
+            @include respond(mobile) {
+                float: right;
+            }
+        }
+
+        h6 {
+            font-size: 25px;
+            color: $white;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 15px;
+            color: $white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    }
+}

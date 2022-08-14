@@ -43,6 +43,7 @@
   transform: translate(-$top, -$left);
 }
 
+// button
 @mixin bordered-btn($background, $btnBackground) {
   background: $background;
   width: 120px;
