@@ -1,3 +1,5 @@
+@import './mixins.scss';
+
 .c-btn {
   padding: 10px 15px;
   color: $white;
@@ -11,16 +13,12 @@
   }
 }
 
-.bordered-btn {
-  padding: 9px 15px;
-  font-size: 14px;
-  border: 1px solid #d3d3d3;
-  border-radius: 4px;
-  color: $black;
-  cursor: pointer;
+.bordered-btn-light
+{
+  @include bordered-btn($default, $white);
+}
 
-  &:hover {
-    box-shadow: 1px 1px 10px #6060605e;
-    transition: 0.5s;
-  }
+.bordered-btn-dark
+{
+  @include bordered-btn($default, $lightGray);
 }

@@ -1,0 +1,49 @@
+@import '../../../../styles.scss';
+
+.about {
+    background-color: #f7f7f7;
+    padding: 40px 0;
+
+    @include respond(mobile) {
+        padding: 20px 0 40px 0px;
+    }
+
+    .home-heading {
+        margin-top: 3.125rem;
+
+        @include respond(tablet) {
+            margin-top: 30px;
+
+            h3 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .right {
+        @include respond(tablet) {
+            margin-top: 30px;
+        }
+
+        img {
+            width: 50%;
+            height: auto;
+            display: block;
+            margin: auto;
+            object-fit: cover;
+            object-position: center;
+
+            @include respond(tablet) {
+                width: 70%;
+            }
+
+            @include respond(tablet) {
+                width: 60%;
+            }
+        }
+    }
+}
