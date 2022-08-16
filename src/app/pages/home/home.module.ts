@@ -17,6 +17,7 @@ import { BuildComponent } from './build/build.component';
 import { CompaniesComponent } from './companies/companies.component';
 import { CommunitiesComponent } from './communities/communities.component';
 import { TeamComponent } from './team/team.component';
+import { TestimonialComponent } from './testimonial/testimonial.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { TeamComponent } from './team/team.component';
     BuildComponent,
     CompaniesComponent,
     CommunitiesComponent,
-    TeamComponent
+    TeamComponent,
+    TestimonialComponent
   ],
   imports: [
     CommonModule,

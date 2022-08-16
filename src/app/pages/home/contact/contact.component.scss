@@ -2,7 +2,7 @@
 
 .contact {
     padding: 40px 0;
-
+    // background: $hGray;
     @include respond(tablet) {
         padding: 3.125rem 0;
     }
