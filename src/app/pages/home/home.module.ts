@@ -13,6 +13,10 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { TechnologiesComponent } from './technologies/technologies.component';
 import { CompanyBarComponent } from './company-bar/company-bar.component';
+import { BuildComponent } from './build/build.component';
+import { CompaniesComponent } from './companies/companies.component';
+import { CommunitiesComponent } from './communities/communities.component';
+import { TeamComponent } from './team/team.component';
 
 
 @NgModule({
@@ -23,7 +27,11 @@ import { CompanyBarComponent } from './company-bar/company-bar.component';
     ProjectsComponent,
     ContactComponent,
     TechnologiesComponent,
-    CompanyBarComponent
+    CompanyBarComponent,
+    BuildComponent,
+    CompaniesComponent,
+    CommunitiesComponent,
+    TeamComponent
   ],
   imports: [
     CommonModule,

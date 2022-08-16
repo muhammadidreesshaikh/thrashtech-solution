@@ -1,7 +1,7 @@
 @import '../../../../styles.scss';
 
 .about {
-    background-color: #f7f7f7;
+    background-color: $hGray;
     padding: 40px 0;
 
     @include respond(mobile) {

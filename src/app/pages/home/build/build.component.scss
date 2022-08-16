@@ -1,0 +1,28 @@
+@import '../../../../styles.scss';
+
+.build{
+    width: 100%;
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+    background-color: #2e2e6a;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-attachment: fixed;
+    @include respond(tablet) {
+        height: 40vh;
+    }
+    .build-text{
+        h1{
+            font-size: 55px;
+            color: $white;
+            font-weight: 700;
+            @include respond(tablet) {
+                font-size: 40px;
+            }
+        }
+    }
+}

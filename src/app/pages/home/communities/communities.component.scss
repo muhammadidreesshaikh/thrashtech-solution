@@ -1,0 +1,37 @@
+@import '../../../../styles.scss';
+
+.communities {
+    padding: 40px 0;
+    background-color: $hGray;
+    .home-heading {
+        @include respond(tablet) {
+            margin-top: 30px;
+
+            h3 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .inner {
+        margin-top: 20px;
+        text-align: center;
+        img {
+            width: 120px;
+            height: 120px;
+            margin-top: 30px;
+            object-fit: contain;
+            object-position: center;
+        }
+        h5{
+            font-size: 17px;
+            padding-top: 10px;
+            font-weight: 600;
+            color: $black;
+        }
+    }
+}

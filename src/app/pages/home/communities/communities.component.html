@@ -1,0 +1,27 @@
+<div class="communities">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 col-md-8 col-lg-7">
+                <div class="home-heading">
+                    <h3>Communities We Lead</h3>
+                    <p>We communities with the world's technology communities</p>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="inner">
+                    <div class="row ">
+
+                        <div class="col-6 col-md-6 col-lg-3" *ngFor="let item of communities">
+                            <img src="{{item.image}}">
+                            <h5>{{item.name}}</h5>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

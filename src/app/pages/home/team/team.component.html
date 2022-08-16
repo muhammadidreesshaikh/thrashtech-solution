@@ -1,0 +1,40 @@
+<div class="team">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 col-md-8 col-lg-7">
+                <div class="home-heading">
+                    <h3>The Team</h3>
+                    <p>Our senior leadership team brings together years of experience, diverse perspectives, and unique business insights.</p>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="row">
+
+                    <div class="col-12 col-md-6 col-lg-3" *ngFor="let item of team">
+                        <div class="profile">
+                            <img src="{{item.image}}" class="image">
+        
+                            <div class="overlay">
+                                <div class="text">
+                                    <h4>{{item.name}}</h4>
+                                    <p>{{item.text}}</p>
+        
+                                    <div class="icons">
+                                        <a href="https://www.facebook.com/"><i class="fa-brands fa-skype"></i></a>
+                                        <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                        <a href="https://mail.google.com/"><i class="fa-solid fa-envelope"></i></a>
+                                        <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
