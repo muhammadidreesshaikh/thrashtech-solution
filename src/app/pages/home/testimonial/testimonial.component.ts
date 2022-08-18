@@ -15,7 +15,7 @@ export class TestimonialComponent implements OnInit {
     "dots": true,
     "infinite": true,
     "autoplay": true,
-    "autoplaySpeed": 2400,
+    "autoplaySpeed": 2000,
     responsive: [
       {
         breakpoint: 1024,

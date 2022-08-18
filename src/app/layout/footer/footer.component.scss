@@ -19,7 +19,7 @@
         color: $default;
 
         @include respond(mobile) {
-            padding-top: 20px;
+            padding-top: 30px;
             font-size: 17px;
             padding-bottom: 4px;
         }

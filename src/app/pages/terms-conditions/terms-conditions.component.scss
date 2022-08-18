@@ -1,0 +1,18 @@
+@import '../../../styles.scss';
+
+.terms{
+    padding: 40px 0;
+    .terms-text{
+        margin-top: 25px;
+        h4{
+            font-size: 20px;
+            color: $black;
+            font-weight: 600;
+        }
+        p{
+            font-size: 16px;
+            color: $gray;
+            padding-top: 8px;
+        }
+    }
+}
