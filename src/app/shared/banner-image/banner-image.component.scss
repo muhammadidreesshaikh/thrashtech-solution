@@ -1,0 +1,26 @@
+@import '../../../styles.scss';
+
+.banner{
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: soft-light;
+    background-color: #585858;
+    .banner-text{
+        text-align: center;
+        color: $white;
+        h1{
+            font-size: 45px;
+        }
+        p{
+            padding-top: 10px;
+            font-size: 14px;
+        }
+    }
+}
