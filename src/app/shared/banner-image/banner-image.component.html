@@ -1,11 +1,20 @@
-<div class="banner" style="background-image: url(../../../assets/img/extra/overview-banner1.png) ;">
+<div class="banner" [style.backgroundImage]="'url(' + item.image + ')'">
+
+    <div class="curve">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#ffff" fill-opacity="1"
+                d="M0,256L48,256C96,256,192,256,288,266.7C384,277,480,299,576,298.7C672,299,768,277,864,266.7C960,256,1056,256,1152,256C1248,256,1344,256,1392,256L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
+    </div>
+
     <div class="container">
         <div class="row justify-content-center">
 
             <div class="col-7">
                 <div class="banner-text">
-                    <h1>About</h1>
-                    <p>Build an engaging app. Integrate AI to work more efficiently. Dive into your data to predict demand. Thrashtect Solution can help you do all this and more with our innovative, client-first services.</p>
+                    <h1>{{item.heading}}</h1>
+                    <!-- <p>{{item.subHeading}}</p> -->
                 </div>
             </div>
 

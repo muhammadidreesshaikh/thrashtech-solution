@@ -14,7 +14,7 @@ import { AboutComponent } from './about.component';
   imports: [
     CommonModule,
     AboutRoutingModule,
-    SharedModule,
+    SharedModule
   ]
 })
 export class AboutModule { }

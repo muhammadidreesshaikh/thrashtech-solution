@@ -11,16 +11,25 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-blend-mode: soft-light;
-    background-color: #585858;
+    background-color: #1c1c1c;
     .banner-text{
         text-align: center;
         color: $white;
         h1{
             font-size: 45px;
         }
-        p{
-            padding-top: 10px;
-            font-size: 14px;
+        // p{
+        //     padding-top: 10px;
+        //     font-size: 14px;
+        // }
+    }
+
+    .curve {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        @include respond(tablet) {
+            bottom: -1px;
         }
     }
 }

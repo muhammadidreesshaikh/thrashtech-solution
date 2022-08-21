@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-banner-image',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerImageComponent implements OnInit {
 
+  @Input() item: any = {}
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.item)
   }
 
 }
