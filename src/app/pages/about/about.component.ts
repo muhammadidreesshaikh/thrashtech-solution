@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class AboutComponent implements OnInit {
 
   data: any = {
-    image: "../../../assets/img/banner-image/about1.jpg",
+    image: "../../../assets/img/banner-image/about.jpg",
     heading: 'About',
     // subHeading: 'Build an engaging app.',
   };

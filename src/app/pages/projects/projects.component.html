@@ -1,1 +1,29 @@
-<p>projects works!</p>
+<app-banner-image [item]="data"></app-banner-image>
+
+<div class="projects">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12">
+                <div class="inner">
+                    <div class="row">
+                        <div class="col-12 col-md-4 col-3" *ngFor="let item of projects">
+                            <div class="admin-card">
+                                <img src="{{ item.image }}" class="image" alt="" width="100%">
+
+                                <div class="middle">
+                                    <a href="{{item.url}}" class="name">{{item.title}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bordered-btn-dark mt-5">
+                        <a routerLink="/projects">See All</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

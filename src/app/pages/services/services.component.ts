@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ServicesComponent implements OnInit {
 
   data: any = {
-    image: "../../../assets/img/banner-image/service1.jpg",
+    image: "../../../assets/img/banner-image/service.jpg",
     heading: 'Services',
     // subHeading: 'Build an engaging app.',
   };

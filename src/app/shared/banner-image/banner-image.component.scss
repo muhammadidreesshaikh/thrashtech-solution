@@ -11,12 +11,13 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-blend-mode: soft-light;
-    background-color: #1c1c1c;
+    background-color: #4c4c4cc7;
     .banner-text{
         text-align: center;
         color: $white;
         h1{
-            font-size: 45px;
+            font-size: 40px;
+            font-weight: 300;
         }
         // p{
         //     padding-top: 10px;

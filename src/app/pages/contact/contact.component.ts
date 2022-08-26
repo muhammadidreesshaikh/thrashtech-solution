@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
+  data: any = {
+    image: "../../../assets/img/banner-image/contact.jpg",
+    heading: 'Contact',
+    // subHeading: 'Build an engaging app.',
+  };
+
   constructor() { }
 
   ngOnInit(): void {
