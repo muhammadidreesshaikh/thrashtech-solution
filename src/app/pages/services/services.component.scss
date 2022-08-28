@@ -19,6 +19,10 @@
 
         h3 {
             padding-top: 20px;
+
+            @include respond(mobile) {
+                font-size: 25px;
+            }
         }
 
         p {
@@ -40,7 +44,7 @@
             background: linear-gradient(90deg, rgba(0, 42, 255, 1) 0%, rgba(146, 0, 190, 1) 100%);
 
             @include respond(mobile) {
-                height: 150px;
+                height: 135px;
             }
 
             h2 {
@@ -53,7 +57,7 @@
                 padding-top: 10px;
 
                 @include respond(mobile) {
-                    font-size: 15px;
+                    font-size: 12px;
                 }
             }
         }
@@ -98,6 +102,10 @@
 
         .right {
             margin-top: 20px;
+
+            @include respond(mobile) {
+                margin-top: 40px;
+            }
 
             img {
                 width: 100%;

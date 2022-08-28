@@ -12,6 +12,9 @@
     background-attachment: fixed;
     background-blend-mode: soft-light;
     background-color: #4c4c4cc7;
+    @include respond(tablet) {
+        height: 30vh;
+    }
     .banner-text{
         text-align: center;
         color: $white;
@@ -30,7 +33,10 @@
         width: 100%;
         top: 0;
         @include respond(tablet) {
-            bottom: -1px;
+            top: 58px
+        }
+        @include respond(mobile) {
+            top: 8.125rem;
         }
     }
 }
