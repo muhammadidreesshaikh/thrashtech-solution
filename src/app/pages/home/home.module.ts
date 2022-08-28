@@ -19,6 +19,8 @@ import { CommunitiesComponent } from './communities/communities.component';
 import { TeamComponent } from './team/team.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { TestimonialComponent } from './testimonial/testimonial.component';
     CommonModule,
     HomeRoutingModule,
     SharedModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    HttpClientModule
   ]
 })
 export class HomeModule { }
