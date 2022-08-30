@@ -48,12 +48,12 @@
             }
 
             h2 {
-                font-size: 50px;
+                font-size: 55px;
                 font-weight: 700;
             }
 
             p {
-                font-size: 16px;
+                font-size: 14px;
                 padding-top: 10px;
 
                 @include respond(mobile) {
@@ -65,6 +65,10 @@
 
     .main-details {
         padding-top: 4.375rem;
+
+        @include respond(mobile) {
+            padding-top: 3.125rem;
+        }
 
         .left {
 

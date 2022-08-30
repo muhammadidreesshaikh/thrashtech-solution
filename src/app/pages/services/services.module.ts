@@ -6,6 +6,9 @@ import { SharedModule } from '../../shared/shared.module';
 import { ServicesRoutingModule } from './services-routing.module';
 import { ServicesComponent } from './services.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -14,7 +17,8 @@ import { ServicesComponent } from './services.component';
   imports: [
     CommonModule,
     ServicesRoutingModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ]
 })
 export class ServicesModule { }
