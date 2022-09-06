@@ -10,6 +10,8 @@ import { ProjectsHomeComponent } from './projects/projects-home/projects-home.co
 import { ServicesHomeComponent } from './services/services-home/services-home.component';
 import { ServicesSeperateComponent } from './services/services-seperate/services-seperate.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { ServicesSeperateComponent } from './services/services-seperate/services
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    HttpClientModule
   ]
 })
 export class AdminModule { }
