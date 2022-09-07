@@ -26,36 +26,45 @@
     }
 
     .listing {
-        margin-top: 50px;
+        margin-top: 20px;
+        .bar{
+            margin-top: 3.75rem;
+            .head {
+                margin-top: 6px;
+                h3 {
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+            }
 
+            .search-container {
+                float: right;
+                position: relative;
+    
+                input {
+                    padding: 6px;
+                    font-size: 15px;
+                    border: 1px solid $lightGray;
+                    border-radius: 8px;
+                }
+    
+                button {
+                    background: transparent;
+                    border: 0;
+                    position: absolute;
+                    top: 8px;
+                    right: 5px;
+                    font-size: 14px;
+                    color: $gray;
+                }
+            }
+        }  
+        
         .table {
             margin-bottom: 0;
 
             a {
                 cursor: pointer;
-            }
-        }
-
-        .search-container {
-            padding-top: 20px;
-            float: right;
-            position: relative;
-
-            input {
-                padding: 6px;
-                font-size: 15px;
-                border: 1px solid $lightGray;
-                border-radius: 7px;
-            }
-
-            button {
-                background: transparent;
-                border: 0;
-                position: absolute;
-                top: 27px;
-                right: 5px;
-                font-size: 14px;
-                color: $gray;
             }
         }
     }
