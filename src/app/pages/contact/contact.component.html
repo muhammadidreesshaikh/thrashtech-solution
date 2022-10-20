@@ -1,48 +1,64 @@
 <app-banner-image [item]="data"></app-banner-image>
 
-
 <div class="contact">
     <div class="container">
         <div class="row justify-content-center">
 
-            <div class="col-12 col-lg-10">
-                <form class="row mt-5">
+            <div class="col-12 col-md-6 col-lg-10">
+                <form class="row mt-5" [formGroup]="contactForm">
                     <div class="col-12 col-md-6 col-lg-6">
                         <div class="form-group">
-                            <input type="name" class="form-control" placeholder="Name">
+                            <input type="name" class="form-control" placeholder="Name" name="name"
+                                formControlName="name">
                         </div>
                     </div>
 
                     <div class="col-12 col-md-6 col-lg-6">
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Email">
+                            <input type="email" class="form-control" placeholder="Email" name="email"
+                                formControlName="email">
                         </div>
                     </div>
 
                     <div class="col-12 col-md-6 col-lg-6">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject">
+                            <input type="text" class="form-control" placeholder="Subject" name="subject"
+                                formControlName="subject">
                         </div>
                     </div>
 
                     <div class="col-12 col-md-6 col-lg-6">
                         <div class="form-group">
-                            <input type="number" class="form-control" placeholder="Phone Number">
+                            <input type="number" class="form-control" placeholder="Phone Number" name="number"
+                                formControlName="number">
                         </div>
                     </div>
 
                     <div class="col-12">
                         <div class="form-group">
-                            <textarea type="text" class="form-control" placeholder="Message" rows="5"></textarea>
+                            <textarea type="text" class="form-control" placeholder="Message" name="temessagext"
+                                formControlName="message" rows="5"></textarea>
                         </div>
                     </div>
 
                     <div class="bordered-btn-dark mt-4">
-                        <a href="#">Send Message</a>
+                        <a (click)="contactLogin()">Send Message</a>
                     </div>
                 </form>
             </div>
 
+            <div class="plain-card mt-5">
+                <h5>CALL US</h5>
+                <p>+92 3310337182</p>
+    
+                <h5 class="pt-3">LOCATION</h5>
+                <p>Shalimar banglows block-17, muneer</p>
+                <p>mobile mall karachi, pakistan</p>
+    
+                <h5 class="pt-3">OFFICE HOURS</h5>
+                <p>Mon - Fri .... 10:00 am - 8:30 pm</p>
+                <p>Sat - Sun .... Closed</p>
+            </div>
         </div>
     </div>
 </div>
