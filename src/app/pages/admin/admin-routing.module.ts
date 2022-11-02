@@ -1,17 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 import { AdminComponent } from './admin.component';
-import { AboutHomeComponent } from './about/about-home/about-home.component';
-import { AboutSeperateComponent } from './about/about-seperate/about-seperate.component';
-import { ProjectsHomeComponent } from './projects/projects-home/projects-home.component';
-import { ProjectsSeperateComponent } from './projects/projects-seperate/projects-seperate.component';
-import { ServicesHomeComponent } from './services/services-home/services-home.component';
-import { ServicesSeperateComponent } from './services/services-seperate/services-seperate.component';
-
-
-
-
 
 const routes: Routes = [
   {
@@ -19,27 +8,20 @@ const routes: Routes = [
     component: AdminComponent,
     children: [
       {
-        path: 'about-home',
-        component: AboutHomeComponent
+        path: '',
+        loadChildren: () => import('./about/about.module').then(m => m.AboutModule)
       },
       {
-        path: 'about-seperate',
-        component: AboutSeperateComponent
+        path: 'about',
+        loadChildren: () => import('./about/about.module').then(m => m.AboutModule)
       },
       {
-        path: 'projects-home',
-        component: ProjectsHomeComponent
+        path: 'projects',
+        loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule)
       },
       {
-        path: 'projects-seperate',
-        component: ProjectsSeperateComponent
-      },{
-        path: 'services-home',
-        component: ServicesHomeComponent
-      },
-      {
-        path: 'services-seperate',
-        component: ServicesSeperateComponent
+        path: 'services',
+        loadChildren: () => import('./services/services.module').then(m => m.ServicesModule)
       }
     ]
   }
